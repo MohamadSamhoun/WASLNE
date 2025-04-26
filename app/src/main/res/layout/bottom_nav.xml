@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#132339"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:elevation="8dp"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="false">
+
+    <LinearLayout
+        android:id="@+id/nav_schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/nav_schedule_icon"
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_dialer"
+            app:tint="#E9D617" />
+
+        <TextView
+            android:id="@+id/nav_schedule_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Schedule"
+            android:textColor="#E9D617"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_live"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/nav_live_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_map"
+            app:tint="#fff" />
+
+        <TextView
+            android:id="@+id/nav_live_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_others"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/nav_others_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_info"
+            app:tint="#fff" />
+
+        <TextView
+            android:id="@+id/nav_others_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

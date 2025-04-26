@@ -1,0 +1,378 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="false">
+    <LinearLayout
+        android:id="@+id/busLabels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/circle_yellow"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus A"
+                android:textColor="@color/navyBlue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/circle_emerald"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus B"
+                android:textColor="@color/navyBlue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/navyBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- STOP 1-->
+    <View
+        android:id="@+id/station1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAU Beirut"
+        android:textColor="#CCC"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/station1"
+        app:layout_constraintTop_toTopOf="@id/station1"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/text1Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:20 AM"
+        android:textColor="#CCC"
+        android:textSize="16sp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/station1"
+        app:layout_constraintTop_toTopOf="@id/station1"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- STOP 2-->
+    <View
+        android:id="@+id/line2"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/navyBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/station1" />
+
+    <View
+        android:id="@+id/station2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Koraytem"
+        android:textColor="#CCC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/station2"
+        app:layout_constraintTop_toTopOf="@id/station2"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/text2Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="6:36 AM"
+        android:textSize="16sp"
+        android:textColor="#CCC"
+        app:layout_constraintStart_toEndOf="@id/station2"
+        app:layout_constraintTop_toTopOf="@id/station2" />
+
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/navyBlue"
+        app:layout_constraintTop_toBottomOf="@id/station2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- STOP 3-->
+
+    <View
+        android:id="@+id/station3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="ABC Verdun"
+        android:textSize="16sp"
+        android:textColor="#CCC"
+        app:layout_constraintStart_toEndOf="@id/station3"
+        app:layout_constraintTop_toTopOf="@id/station3" />
+
+    <TextView
+        android:id="@+id/text3Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:45 AM"
+        android:textColor="#CCC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/station3"
+        app:layout_constraintTop_toTopOf="@id/station3"
+        android:layout_marginEnd="16dp"/>
+
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/emeraldGreen"
+        app:layout_constraintTop_toBottomOf="@id/station3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- STOP 4-->
+    <View
+        android:id="@+id/station4"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mazraa"
+        android:textColor="@color/emeraldGreen"
+        android:textSize="16sp"
+        android:background="@color/navyBlue"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/station4"
+        app:layout_constraintTop_toTopOf="@id/station4"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/text4Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:50 AM"
+        android:padding="5dp"
+        android:textColor="@color/navyBlue"
+        android:textSize="16sp"
+        android:background="@color/emeraldGreen"
+        app:layout_constraintStart_toEndOf="@id/station4"
+        app:layout_constraintTop_toTopOf="@id/station4"
+        android:layout_marginStart="16dp"/>
+
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/station4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- STOP 5-->
+    <View
+        android:id="@+id/station5"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barbir"
+        android:textColor="@color/yellow"
+        android:background="@color/navyBlue"
+        android:padding="5dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/station5"
+        app:layout_constraintTop_toTopOf="@id/station5"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/text5Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:45 AM"
+        android:padding="5dp"
+        android:textColor="@color/navyBlue"
+        android:textSize="16sp"
+        android:background="@color/yellow"
+        app:layout_constraintEnd_toStartOf="@id/station5"
+        app:layout_constraintTop_toTopOf="@id/station5"
+        android:layout_marginEnd="16dp"/>
+
+    <View
+        android:id="@+id/line6"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/station5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- STOP 6-->
+    <View
+        android:id="@+id/station6"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adliyeh"
+        android:textColor="@color/navyBlue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/station6"
+        app:layout_constraintTop_toTopOf="@id/station6"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/text6Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="6:48 AM"
+        android:textSize="16sp"
+        android:textColor="@color/navyBlue"
+        app:layout_constraintStart_toEndOf="@id/station6"
+        app:layout_constraintTop_toTopOf="@id/station6" />
+
+    <View
+        android:id="@+id/line7"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/station6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- STOP 7-->
+    <View
+        android:id="@+id/station7"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/circle_navy"
+        app:layout_constraintTop_toBottomOf="@id/line7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B. Hammoud"
+        android:textColor="@color/navyBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/station7"
+        app:layout_constraintTop_toTopOf="@id/station7"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/text7Est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:55 AM"
+        android:textColor="@color/navyBlue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/station7"
+        app:layout_constraintTop_toTopOf="@id/station7"
+        android:layout_marginEnd="16dp"/>
+
+    <include
+        android:id="@+id/bottom_nav_include"
+        layout="@layout/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

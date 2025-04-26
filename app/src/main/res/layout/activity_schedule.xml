@@ -1,378 +1,1481 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
-<ScrollView
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_above="@id/bottom_navigation">
-
     <LinearLayout
+        android:id="@+id/button_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <Button
+            android:id="@+id/button_to_lau"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#132339"
+            android:textColor="#fff"
+            android:text="To LAU" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_from_lau"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#CECECE"
+            android:text="From LAU"
+            android:textColor="#767676" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/to_lau_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_layout"
+        android:layout_above="@id/bottom_nav_include">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="8dp">
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF">
 
-                <!--        Bus-->
-                <androidx.cardview.widget.CardView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    card_view:cardCornerRadius="12dp"
-                    card_view:cardElevation="6dp"
-                    card_view:cardBackgroundColor="#FFFFFF">
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#132339"
+                        android:padding="16dp"
+                        android:text="Bus A"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical" />
+<!--stop1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop1Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="LAU Beirut"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop1AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:20 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop1AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+<!--stop2-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
 
                         <TextView
-                            android:id="@+id/tvBusHeaderA"
-                            android:layout_width="match_parent"
+                            android:id="@+id/stop2Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
                             android:layout_height="wrap_content"
-                            android:background="#132339"
-                            android:padding="16dp"
-                            android:text="Bus A"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:gravity="center_vertical" />
+                            android:text="Koraytem"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/ToScheduleStop2AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="12dp"
-                            android:gravity="center_vertical"
-                            android:weightSum="4">
+                            android:text="6:27 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
 
-                            <TextView
-                                android:id="@+id/tvStopNameA1"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="Stop 1"
-                                android:textColor="#132339"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tvStopETAA1"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:text="7:42 AM"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btnGoToStopA1"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="View Stop"
-                                android:backgroundTint="#E9D617"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <Button
+                            android:id="@+id/btnToScheduleStop2AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="12dp"
-                            android:gravity="center_vertical"
-                            android:weightSum="4">
-
-                            <TextView
-                                android:id="@+id/tvStopNameA2"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="Stop 2"
-                                android:textColor="#132339"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tvStopETAA2"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:text="7:54 AM"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btnGoToStopA2"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="View Stop"
-                                android:backgroundTint="#E9D617"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="12dp"
-                            android:gravity="center_vertical"
-                            android:weightSum="4">
-
-                            <TextView
-                                android:id="@+id/tvStopNameA3"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="Stop 3"
-                                android:textColor="#132339"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tvStopETAA3"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:text="8:02 AM"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btnGoToStopA3"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="View Stop"
-                                android:backgroundTint="#E9D617"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <!--        Bus-->
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    card_view:cardCornerRadius="12dp"
-                    card_view:cardElevation="6dp"
-                    card_view:cardBackgroundColor="#FFFFFF">
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+<!--stop3-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
 
                         <TextView
-                            android:id="@+id/tvBusHeaderB"
-                            android:layout_width="match_parent"
+                            android:id="@+id/stop3Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
                             android:layout_height="wrap_content"
-                            android:background="#132339"
-                            android:padding="16dp"
-                            android:text="Bus B"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:gravity="center_vertical" />
+                            android:text="ABC Verdun"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/ToScheduleStop3AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="12dp"
-                            android:gravity="center_vertical"
-                            android:weightSum="4">
+                            android:text="6:33 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
 
-                            <TextView
-                                android:id="@+id/tvStopNameB1"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="Stop 1"
-                                android:textColor="#132339"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tvStopETAB1"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:text="7:50 AM"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btnGoToStopB1"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="View Stop"
-                                android:backgroundTint="#E9D617"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <Button
+                            android:id="@+id/btnToScheduleStop3AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="12dp"
-                            android:gravity="center_vertical"
-                            android:weightSum="4">
-
-                            <TextView
-                                android:id="@+id/tvStopNameB2"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="Stop 2"
-                                android:textColor="#132339"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tvStopETAB2"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:text="8:03 AM"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-
-                            <Button
-                                android:id="@+id/btnGoToStopB2"
-                                android:layout_width="0dp"
-                                android:layout_weight="1.5"
-                                android:layout_height="wrap_content"
-                                android:text="View Stop"
-                                android:backgroundTint="#E9D617"
-                                android:textColor="#132339"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
 
-        </ScrollView>
+<!--stop4-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
 
-    </LinearLayout>
-</ScrollView>
+                        <TextView
+                            android:id="@+id/stop4Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Mazraa"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-<LinearLayout
-    android:id="@+id/bottom_navigation"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:background="#132339"
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:paddingTop="6dp"
-    android:paddingBottom="6dp"
-    android:elevation="8dp">
+                        <TextView
+                            android:id="@+id/ToScheduleStop4AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:42 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
 
-    <LinearLayout
-        android:layout_width="0dp"
+                        <Button
+                            android:id="@+id/btnToScheduleStop4AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+
+<!--stop 5-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop5Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Barbir"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop5AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:50 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop5AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+<!--stop 6-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop6Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Adliyeh"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop6AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:05 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop6AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+<!--stop 7-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop7Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="B. Hammoud"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop7AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:13 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop7AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBusHeaderB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#132339"
+                        android:padding="16dp"
+                        android:text="Bus B"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical" />
+
+
+                    <!--stop1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop1Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="LAU Beirut"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop1BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:30 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop1BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop2-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop2Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Koraytem"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop2BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:37 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop2BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop3-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop3Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="ABC Verdun"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop3BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:43 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop3BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop4-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop4text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Mazraa"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop4BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:52 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop4BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+
+                    <!--stop 5-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop5Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Barbir"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop5BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:02 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop5BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop 6-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop6Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Adliyeh"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop6BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:15 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop6BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop 7-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop7Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="B. Hammoud"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ToScheduleStop7BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:23 AM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnToScheduleStop7BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/from_lau_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_layout"
+        android:layout_above="@id/bottom_nav_include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#132339"
+                        android:padding="16dp"
+                        android:text="Bus A"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical" />
+                    <!--stop7-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop7text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="B. Hammoud"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop7AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:13 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop7AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop6-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop6Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Adliyeh"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop6AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:05 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop6GPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop5-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop5Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Barbir"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop5AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:50 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop5AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop4-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop4Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Mazraa"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop4AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:42 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop4AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop3Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="ABC Verdun"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop3AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:33 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop3AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop2Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Koraytem"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop2AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:27 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop2AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop1Atext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="LAU Beirut"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop1AETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:20 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop1AGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBusHeaderB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#132339"
+                        android:padding="16dp"
+                        android:text="Bus B"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical" />
+
+
+                    <!--stop7-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop7Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="B. Hammoud"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop7BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:23 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop7BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop6-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop6Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Adliyeh"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop6BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:15 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop6BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop5-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop5Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Barbir"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop5BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="7:02 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop5BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop4-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop4Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Mazraa"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop4BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:52 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop4BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop3Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="ABC Verdun"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop3BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:43 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop3BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop2Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="Koraytem"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop2BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:37 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop2BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#CCC"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp" />
+
+                    <!--stop1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/stop1Btext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="LAU Beirut"
+                            android:textColor="#132339"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FromScheduleStop1BETA"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="6:30 PM"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnFromScheduleStop1BGPS"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:text="View Stop"
+                            android:backgroundTint="#E9D617"
+                            android:textColor="#132339"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottom_nav_include"
+        layout="@layout/bottom_nav"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:padding="8dp">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_dialog_map"
-            app:tint="#fff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Live"
-            android:textSize="12sp"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:paddingTop="4dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:padding="8dp">
-
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_dialog_dialer"
-            app:tint="#E9D617" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Schedule"
-            android:textSize="12sp"
-            android:textColor="#E9D617"
-            android:gravity="center"
-            android:paddingTop="4dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:padding="8dp">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_dialog_info"
-            app:tint="#fff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Others"
-            android:textSize="12sp"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:paddingTop="4dp" />
-    </LinearLayout>
-
-</LinearLayout>
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
-
