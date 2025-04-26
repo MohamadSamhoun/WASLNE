@@ -34,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         signupCard = findViewById(R.id.signupCard);
-        signUpLink = findViewById(R.id.textViewSignUp); // Your "Sign up?" link
-        closeSignup = findViewById(R.id.closeSignup);   // The ✕ icon
+        signUpLink = findViewById(R.id.textViewSignUp);
+        closeSignup = findViewById(R.id.closeSignup);
         signIn = findViewById(R.id.signIn);
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
                 startActivity(intent);
             }
         });
