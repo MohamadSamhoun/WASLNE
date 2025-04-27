@@ -2,7 +2,7 @@ package com.example.waslne;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,32 +10,30 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LiveActivity extends AppCompatActivity {
+import pl.droidsonroids.gif.GifImageView;
 
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_live);
+        setContentView(R.layout.activity_splash);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        BottomNavHelper.setupBottomNavigation(this, "live");
 
-        int[] stationIds = { R.id.station1, R.id.station2, R.id.station3, R.id.station4, R.id.station5 , R.id.station6, R.id.station7};
+        GifImageView gifImageView = findViewById(R.id.gifImageView);
 
-
-        for (int id : stationIds) {
-            View station = findViewById(id);
-            station.setOnClickListener(v -> {
-                Intent intent = new Intent(LiveActivity.this, StopActivity.class);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
-            });
-        }
-
-
+                finish();
+            }
+        }, 2000);
     }
 }

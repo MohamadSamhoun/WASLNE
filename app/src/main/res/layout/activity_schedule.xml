@@ -764,6 +764,7 @@
 
     <ScrollView
         android:id="@+id/from_lau_schedule"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/button_layout"
