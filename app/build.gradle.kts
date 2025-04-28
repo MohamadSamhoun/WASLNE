@@ -32,6 +32,14 @@ android {
 }
 
 dependencies {
+    // Existing dependencies
+    implementation("com.google.ai.client.generativeai:generativeai:0.2.2")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation ("com.google.guava:guava:32.1.2-android")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.1")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.23")
     implementation(libs.appcompat)
     implementation(libs.material)
