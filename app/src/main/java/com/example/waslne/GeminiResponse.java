@@ -3,6 +3,8 @@ package com.example.waslne;
 import com.google.gson.annotations.SerializedName;
 
 public class GeminiResponse {
+
+    //JSON
     @SerializedName("candidates")
     private Candidate[] candidates;
 
@@ -21,6 +23,7 @@ public class GeminiResponse {
 
     public static class Content {
         @SerializedName("parts")
+        // parts (array) of 'Part' objects within  'Content'.
         private Part[] parts;
 
         public Part[] getParts() {

@@ -1,0 +1,87 @@
+How do I check the bus schedule?
+You can check the bus schedule by tapping the "Schedule" icon at the bottom of the screen. There you'll see options for "To LAU" and "From LAU" routes with all stop times listed.
+---
+Is there transportation to Beirut?
+Currently the application only covers transporttion to Jbeil.
+---
+Can I see the real-time location of my bus?
+Yes, tap on the "Live" icon at the bottom of the screen to see real-time locations of all buses currently in service as well as their ETAs.
+---
+How do I know which bus stop is closest to me?
+The app uses your location to show nearby stops. When viewing stop details, you'll see the distance (like "0.5 miles away") to help you find the closest one.
+---
+What does the "View Stop" button do?
+The "View Stop" button shows you detailed information about that specific stop, including the next bus arrival time, distance from your current location, and an option to view it on Google Maps.
+---
+How accurate are the arrival times?
+Our arrival times are updated in real-time based on GPS data from our buses. Under normal conditions, they're accurate within 1-2 minutes, but traffic and weather can affect precision, However please keep in mind the times in the Schedule section is FIXED, but those in Live section is expected ETA.
+---
+What's the difference between Bus A and Bus B?
+Bus A and Bus B follow the same routes that serve the same areas or directions. Bus A travels through LAU Beirut, Koraytem, ABC Verdun, etc., and bus B follows it in case of any issue or in case Bus A fills up.
+---
+How often is the schedule updated?
+The schedule is updated on weekends, but real-time adjustments are made throughout the day based on traffic conditions and driver reports.
+---
+Can I get notifications before my bus arrives?
+Yes, you can set arrival alerts by selecting a specific stop and enabling notifications. We'll alert you when your bus is approaching.
+---
+How do I switch between "To LAU" and "From LAU" views?
+At the top of the schedule screen, you'll see toggle buttons for "To LAU" and "From LAU." Tap on either option to switch between these views.
+---
+What does the colored line in the bus route map represent?
+The colored line shows the bus route. Different colors may indicate different bus lines or highlight the section of the route where the bus is currently traveling labels on top indicate which Bus follows which color.
+---
+What do the different colors on the timeline mean?
+Yellow and green sections on the timeline represent different bus lines. For example, Bus A may be shown in yellow while Bus B appears in green to help you easily identify your route.
+---
+How do I see the driver's information?
+Driver information is displayed on the stop details screen. For example, "Driver is Abo Saeed Abo Karmo".
+---
+Is there a way to report a problem with a specific bus?
+Yes, tap on the "Support" icon at the bottom of the screen to report any issues with a specific bus, driver, or route.
+---
+Can I save my favorite routes or stops?
+Yes, you can bookmark favorite stops or routes for quick access by tapping the star icon when viewing stop details.
+---
+How do I contact customer support directly?
+Tap on the "Support" icon at the bottom navigation bar to access customer support options, including live chat and help center resources.
+---
+Does the app work offline?
+Basic schedules are available offline, but real-time updates and live tracking require an internet connection.
+---
+How do I check the bus fare?
+Please contact LAU for further information.
+---
+How do I track my current journey?
+When on a bus, tap the "Live" button at the bottom of the screen to see your journey progress along the route in real-time.
+---
+Is there a way to see all stops on a specific route?
+Yes, when viewing Bus A or Bus B in the schedule screen, all stops are listed in order with their respective arrival times.
+---
+How do I find out how far away a bus stop is from my location?
+Tap on "View Stop" for any stop to see detailed information, including the distance from your current location (e.g., "0.5 miles away").
+---
+What does "0.5 miles away" refer to in the stop detail screen?
+This indicates the physical distance between your current location and that particular bus stop.
+---
+Can I see the estimated arrival time at my destination?
+Yes, all estimated arrival times are displayed next to each stop name in the Live view.
+---
+How do I know which bus to take to reach a specific destination?
+Use the schedule view to see which bus routes (Bus A or B) they both serve the same destionation, check the estimated times to plan accordingly.
+---
+What happens if I miss my bus?
+Check the schedule view for the next available bus. The app will show you the next arrival time for your selected stop and for different buses.
+---
+How frequently do buses run on weekends?
+Weekend schedules may differ from weekdays. Check the schedule tab for current weekend timing information.
+---
+Does the app show traffic conditions that might delay my bus?
+While the app doesn't show traffic visually, our arrival time estimates account for current traffic conditions affecting the routes.
+---
+How do I see previous stops the bus has already passed?
+In the Live view, you can see the full route including passed stops, current position, and upcoming stops.
+---
+How do I update the app to the latest version?
+The app will notify you when updates are available, or you can check your device's app store for the latest version.
+---

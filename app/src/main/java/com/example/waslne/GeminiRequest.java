@@ -3,7 +3,7 @@ package com.example.waslne;
 import com.google.gson.annotations.SerializedName;
 
 public class GeminiRequest {
-    @SerializedName("contents")  //  Use @SerializedName
+    @SerializedName("contents")
     private Content[] contents;
 
     public GeminiRequest(String message) {
